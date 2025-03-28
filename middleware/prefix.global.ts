@@ -2,7 +2,7 @@ export default defineNuxtRouteMiddleware((to) => {
 	const config = useRuntimeConfig()
 
 	// 仅在生产环境处理
-	if (process.env.NODE_ENV === 'production') {
+	if (process.env.NODE_ENV === 'production' && to.path !== '/') {
 		const base = config.public.baseURL
 
 		// 排除base路径自身和已包含前缀的路径
