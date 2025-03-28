@@ -1,21 +1,20 @@
 <script setup>
-const config = useRuntimeConfig()
 const menuitems = [
   {
     title: "Features",
-    path: `${config.public.baseURL}`
+    path: "/",
   },
   {
     title: "Pricing",
-    path: `${config.public.baseURL}pricing`
+    path: "/pricing",
   },
   {
     title: "About",
-    path: `${config.public.baseURL}about`
+    path: "/about",
   },
   {
     title: "Contact",
-    path: `${config.public.baseURL}contact`,
+    path: "/contact",
   },
 ];
 
