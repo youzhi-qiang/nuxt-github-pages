@@ -6,7 +6,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
 		const base = config.public.baseURL
 		console.log('生产环境处理', to, from)
 		// 排除base路径自身和已包含前缀的路径
-		if (!to.path.startsWith(base)) {
+		if (!to.path.startsWith(base) && to.fullPath !== '/') {
 			return navigateTo({
 				path: `${base}${to.path.slice(1)}`,
 				query: to.query,
