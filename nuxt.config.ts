@@ -8,10 +8,10 @@ export default defineNuxtConfig({
   //     publicDir: path.join(__dirname, 'docs')
   //   }
   // },
-  app: {
-    baseURL: '/nuxt-github-pages/',
-    // buildAssetsDir: 'nuxt_assets'
-  },
+  // app: {
+  //   baseURL: '/nuxt-github-pages/',
+  //   // buildAssetsDir: 'nuxt_assets'
+  // },
 
   modules: [
 
