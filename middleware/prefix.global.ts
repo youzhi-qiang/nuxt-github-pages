@@ -1,7 +1,7 @@
 export default defineNuxtRouteMiddleware((to) => {
 	const config = useRuntimeConfig()
 	const base = config.public.baseURL
-	console.log('目标路径', to.path)
+
 	// 仅在生产环境且非根路径时处理
 	if (process.env.NODE_ENV === 'production') {
 		return navigateTo({
