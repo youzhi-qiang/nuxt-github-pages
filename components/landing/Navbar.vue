@@ -3,7 +3,7 @@ const config = useRuntimeConfig()
 const menuitems = [
   {
     title: "Features",
-    path: "#"
+    path: `${config.public.baseURL}`
   },
   {
     title: "Pricing",
