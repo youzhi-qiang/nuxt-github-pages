@@ -45,9 +45,9 @@ const open = ref(false);
       <nav class="w-full lg:w-auto mt-2 lg:flex lg:mt-0" :class="{ block: open, hidden: !open }">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           <li v-for="item of menuitems">
-            <NuxtLink :to="item.path" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+            <a :href="item.path" class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
               {{ item.title }}
-            </NuxtLink>
+            </a>
           </li>
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
