@@ -5,7 +5,7 @@ export default defineNuxtRouteMiddleware((to) => {
 	// 标准化路径格式
 	const normalizedBase = base.endsWith('/') ? base : `${base}/`
 	const currentPath = to.path.replace(/\/$/, '') // 移除路径末尾斜杠
-
+	console.log('to.path', to.path)
 	if (process.env.NODE_ENV === 'production') {
 		// 需要跳过的路径条件
 		const isRoot = currentPath === ''
