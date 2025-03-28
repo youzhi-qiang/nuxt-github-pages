@@ -1,13 +1,14 @@
-<script setup lang="ts">
-const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first())
-
-useSeoMeta({
-	title: home.value?.title,
-	description: home.value?.description
-})
+<script setup>
+definePageMeta({
+  layout: "landing",
+});
 </script>
 
 <template>
-	<ContentRenderer v-if="home" :value="home" />
-	<div v-else>Home not found</div>
+  <LandingContainer>
+    <LandingHero></LandingHero>
+    <LandingFeatures></LandingFeatures>
+    <LandingLogos></LandingLogos>
+    <LandingCta></LandingCta>
+  </LandingContainer>
 </template>

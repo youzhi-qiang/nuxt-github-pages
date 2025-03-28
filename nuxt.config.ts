@@ -14,12 +14,30 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxt/content',
-    '@nuxt/icon',
-    '@nuxt/image',
-    '@nuxt/scripts',
-    '@nuxt/test-utils',
-    '@nuxt/ui'
+
+    "nuxt-icon"
   ],
+  css: [
+    '~/assets/css/main.css',
+
+  ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+  // Vite 配置
+  vite: {
+    css: {
+      postcss: {
+        plugins: [
+          require('tailwindcss'),
+          require('autoprefixer'),
+        ],
+      },
+    },
+  },
+
   // experimental: { payloadExtraction: false }
 })
