@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const path = require('path')
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.NODE_ENV === 'production' ? '/nuxt-github-pages/' : '/'
+    }
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   // nitro: {
@@ -8,10 +13,10 @@ export default defineNuxtConfig({
   //     publicDir: path.join(__dirname, 'docs')
   //   }
   // },
-  // app: {
-  //   baseURL: '/nuxt-github-pages/',
-  //   // buildAssetsDir: 'nuxt_assets'
-  // },
+  app: {
+    baseURL: '/nuxt-github-pages/',
+    // buildAssetsDir: 'nuxt_assets'
+  },
 
   modules: [
 
