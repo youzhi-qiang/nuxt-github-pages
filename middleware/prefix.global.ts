@@ -12,8 +12,8 @@ export default defineNuxtRouteMiddleware((to, from) => {
 				query: to.query,
 				hash: to.hash
 			}, { redirectCode: 301 })
-		} else {
-			return navigateTo({ path: to.path }, { redirectCode: 301 })
 		}
+		return navigateTo('/', { redirectCode: 301 }) // 重定向到新路径，保持查询参数和哈希
+
 	}
 })
