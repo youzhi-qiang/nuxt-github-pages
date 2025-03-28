@@ -3,7 +3,9 @@ const path = require('path')
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      baseURL: process.env.NODE_ENV === 'production' ? '/nuxt-github-pages/' : '/'
+      baseURL: process.env.NODE_ENV === 'production'
+        ? '/nuxt-github-pages'  // 去除末尾斜杠
+        : '/'
     }
   },
   compatibilityDate: '2024-11-01',
